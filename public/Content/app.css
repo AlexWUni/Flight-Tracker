@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    background-image: url("/Assets/images/Background.jpg");
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #003c71 !important; 
+    font-family: "Ubuntu";
+}
+.btn-primary {
+    background-color: #005793 !important; 
+    border-color: #005793 !important;
+    box-shadow: 2px 2px 5px #003c71;
+    font-family: "Ubuntu" !important;
+}
+
+.btn-warning {
+    background-color: #e75d2a !important; 
+    border-color: #e75d2a !important;
+    box-shadow: 2px 2px 5px #003c71;
+    color: #ffffff !important;
+    font-family: "Ubuntu" !important;
+}
+
+footer .navbar-text {
+    width: 100%;
+    text-align: left;
+    margin: 0; 
+    color: #ffffff !important;
+    font-family: "Ubuntu" !important;
+}
+
+h1 {
+    color: #e75d2a !important;
+    font-family: "Ubuntu";
+}
+
+p {
+    color: #e75d2a;
+    font-family: "Ubuntu";
+}
+
+th {
+    font-family: "Ubuntu" !important;
+}
+
+label {
+    color: #e75d2a !important;
+    font-family: "Ubuntu" !important;
+}

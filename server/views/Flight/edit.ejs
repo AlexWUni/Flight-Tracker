@@ -1,0 +1,45 @@
+<%- include ../Partials/header.ejs%>
+<%- include ../Partials/main_nav.ejs%>
+<!--Content for the edit Operation-->
+<div class="container"></div>
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="dateTextField">Date</label>
+                    <input type="text" class="form-control" id="dateTextField" placeholder="Enter the Flight Date" name="Date" value="<%= Flight.Date %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="aircraft_typeTextField">Aircraft Type</label>
+                    <input type="text" class="form-control" id="aircraft_typeTextField" placeholder="Enter the Aircraft Type" name="Aircraft_Type" value="<%= Flight.Aircraft_Type %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="aircraft_registrationTextField">Aircraft Registration</label>
+                    <input type="text" class="form-control" id="aircraft_registrationTextField" placeholder="Enter the Aircraft Registration" name="Aircraft_Registration" value="<%= Flight.Aircraft_Registration %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="pilot_in_commandTextField">Pilot In Command</label>
+                    <input type="text" class="form-control" id="pilot_in_commandTextField" placeholder="Enter the Pilot In Command" name="Pilot_In_Command" value="<%= Flight.Pilot_In_Command %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="departure_locationTextField">Departure Location</label>
+                    <input type="text" class="form-control" id="departure_locationTextField" placeholder="Enter the Departure Location" name="Departure_Location" value="<%= Flight.Departure_Location %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="arrival_locationTextField">Arrival Location</label>
+                    <input type="text" class="form-control" id="arrival_locationTextField" placeholder="Enter the Arrival Location" name="Arrival_Location" value="<%= Flight.Arrival_Location %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="hours_flownTextField">Hours Flown</label>
+                    <input type="text" class="form-control" id="hours_flownTextField" placeholder="Enter the Number of Hours Flown" name="Hours_Flown" value="<%= Flight.Hours_Flown %>" required>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit
+                <i class="fas fa-edit"></i></button>  
+                <button class="btn btn-warning" type="submit">Cancel
+                    <i class="fas fa-undo"></i></button>    
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ../Partials/footer.ejs%>

@@ -1,0 +1,49 @@
+<%- include ../Partials/header.ejs%>
+<%- include ../Partials/main_nav.ejs%>
+<!--Flight Database-->
+<main class="container">
+    <div class="row">
+        <div class="text-center col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <a href="/flightslist/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add Flight
+            </a>
+            <table class="table table-bordered table-striped table-hover">
+                <tr class="d-flex">
+                    <th class="text-center col-1">Date</th>
+                    <th class="text-center col-2">Aircraft Type</th>
+                    <th class="text-center col-2">Aircraft Registration</th>
+                    <th class="text-center col-1">Pilot In Command</th>
+                    <th class="text-center col-1">Departure Location</th>
+                    <th class="text-center col-1">Arrival Location</th>
+                    <th class="text-center col-1">Hours Flown</th>
+                </tr>
+                <% for(let count=0;count<FlightList.length;count++) { %>
+                <tr class="d-flex">
+                    <td class="text-center col-1"><%= FlightList[count].Date %></td>
+                    <td class="text-center col-2"><%= FlightList[count].Aircraft_Type %></td>
+                    <td class="text-center col-2"><%=FlightList[count].Aircraft_Registration%></td>
+                    <td class="text-center col-1"><%=FlightList[count].Pilot_In_Command%></td>
+                    <td class="text-center col-1"><%=FlightList[count].Departure_Location%></td>
+                    <td class="text-center col-1"><%=FlightList[count].Arrival_Location%></td>
+                    <td class="text-center col-1"><%= FlightList[count].Hours_Flown %></td>
+                    <td class="text-center col-1">
+                        <a href="/flightslist/edit/<%= FlightList[count]._id%>"
+                            class="btn btn-primary btn-sm">
+                        <i class="fas fa-pencil-alt"></i>Edit
+                    </a>
+                    </td>
+                    <td class="text-center col-1">
+                        <a href="/flightslist/delete/<%= FlightList[count]._id%>"
+                            class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash-alt"></i>Delete
+                    </a>
+                    </td>
+                </tr>    
+                    <%} %>
+            </table>
+        </div>
+    </div>
+</main>
+<%- include ../Partials/footer.ejs%>
